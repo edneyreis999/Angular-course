@@ -7,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-  private ingredients : Ingredient[] = [];
+  private ingredients: Ingredient[] = [];
 
   constructor() { }
 
   ngOnInit() {
-    let ingredient = new Ingredient('Maça', 2);
-    let ingredient2 = new Ingredient('Tomate', 5);
+    const ingredient = new Ingredient('Maça', 2);
+    const ingredient2 = new Ingredient('Tomate', 5);
 
     this.ingredients.push(ingredient);
     this.ingredients.push(ingredient2);
+  }
+
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
   }
 
 }
