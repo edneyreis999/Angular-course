@@ -17,4 +17,8 @@ export class RecipeService{
         console.log(this.recipes);
         return this.recipes.slice();
     }
+
+    public getRecipe(index:number){
+        return this.recipes[index];
+    }
 }

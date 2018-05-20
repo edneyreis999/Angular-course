@@ -8,9 +8,11 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-
   @Input()
   private recipe:Recipe;
+
+  @Input()
+  private index:number;
 
   constructor(private recipeService:RecipeService) { }
 
